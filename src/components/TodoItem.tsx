@@ -16,19 +16,22 @@ const TodoItem: React.FC<Props> = ({ todo, todos, setTodos }) => {
   const handleDeleteTask = (id: number) => {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
+  const handleEditTask = (id: number) => {
+    console.log(id)
+  }
 
   return (
     <form className='todos-item'>
       {todo.isDone ? <s className='item-text'>{todo.todo}</s> : <span className='item-text'>{todo.todo}</span>}
       <div>
         <span className='item-icon'>
-          <AiFillEdit />
+          <AiFillEdit onClick={() => handleEditTask(todo.id)} className='item-icon-edit' />
         </span>
         <span className='item-icon'>
-          <AiFillDelete onClick={() => handleDeleteTask(todo.id)} />
+          <AiFillDelete onClick={() => handleDeleteTask(todo.id)} className='item-icon-delete' />
         </span>
         <span className='item-icon' onClick={() => handleDoneTask(todo.id)}>
-          <MdDone />
+          <MdDone className='item-icon-done' />
         </span>
       </div>
     </form>
