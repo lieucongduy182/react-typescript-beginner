@@ -1,3 +1,15 @@
+.todos-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 29.5%;
+    padding: 15px;
+    margin-top: 15px;
+    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
 .input {
     display: flex;
     position: relative;
@@ -35,18 +47,9 @@
 
 .todos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 0 10px;
     width: 90%;
-    flex-wrap: wrap;
-}
-
-.todos-item {
-    display: flex;
-    width: 29.5%;
-    padding: 15px;
-    margin-top: 15px;
-    background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
-    border-radius: 5px;
     flex-wrap: wrap;
 }
 
@@ -59,6 +62,7 @@
 .item-text {
     flex: 1;
     font-size: 16px;
+    line-height: 29px;
 }
 
 .item-icon {
@@ -79,4 +83,13 @@
 .item-icon-done:hover {
     transition: 0.3s ease-in-out;
     color: greenyellow;
+}
+
+.input-text-edit {
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
 }
